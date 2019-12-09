@@ -1,0 +1,13 @@
+#studentwrapper{
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+tr:nth-child(even){
+    background-color: cadetblue !important;
+    color: lightblue;
+}
+h1{
+    color: darkblue !important;
+    border-color: black;
+}

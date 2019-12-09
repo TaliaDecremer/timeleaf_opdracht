@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Studenten Databank Detail</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet"th:href="@{/css/main.css}">
+
+</head>
+<body th:object="${student}">
+<div class="container-fluid" >
+
+    <h1>Studenten Databank</h1>
+    <div id="studentwrapper">
+
+        <table id="studenttable">
+            <thead>
+            <tr>
+                <td>Voornaam</td>
+                <td>Achternaam</td>
+                <td>Specialisatie</td>
+                <td>Geboortedatum</td>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <!--voor elk product dus for each zie uitwerking hieronder-->
+            <tr>
+                <td th:text="*{voornaam}"> </td>
+                <td th:text="${student.achternaam}"> </td>
+                <td th:text="${student.specialisatie}"> </td>
+                <td th:text="${student.geboortedatum}"> </td>
+            </tr>
+
+            </tbody>
+
+
+
+        </table>
+
+
+
+    </div>
+
+</body>
+</html>
